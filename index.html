@@ -1,0 +1,42 @@
+<html>
+  <head>
+  <script>
+    function toggleMute() {
+        var video = document.getElementById('theVideo');
+        if (video.muted) {
+            video.muted = false;
+        } else {
+            video.muted = true;
+        }
+    }
+  </script>
+  <style>
+    #theVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    video {
+      object-fit: cover;
+    }
+
+    button {
+      position: absolute;
+      top: 10;
+      left: 10;
+      height: 30px;
+      width: 80px;
+      font-weight: bold;
+    }
+  </style>
+  </head>
+  <video autoplay muted loop id="theVideo">
+    <source src="mihir.mp4" type="video/mp4">
+  </video>
+
+  <button onclick=toggleMute()>Sound &#128266;</button>
+
+</html>
